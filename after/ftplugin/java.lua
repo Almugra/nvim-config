@@ -1,0 +1,42 @@
+--local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+--local workspace_dir = '/home/muce/.cache/jdtls-workspace/' .. project_name
+--
+--local config = {
+--  cmd = {
+--    '/usr/lib/jvm/java-17-openjdk-amd64/bin/java',
+--    '-Declipse.application=org.eclipse.jdt.ls.core.id1',
+--    '-Dosgi.bundles.defaultStartLevel=4',
+--    '-Declipse.product=org.eclipse.jdt.ls.core.product',
+--    '-Dlog.protocol=true',
+--    '-Dlog.level=ALL',
+--    '-Xms1g',
+--    '--add-modules=ALL-SYSTEM',
+--    '--add-opens', 'java.base/java.util=ALL-UNNAMED',
+--    '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+--    '-jar', '/home/muce/libary/java/jdt-language-server-1.9.0-202203031534/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
+--    '-configuration', '/home/muce/libary/java/jdt-language-server-1.9.0-202203031534/config_win/',
+--    '-data', workspace_dir,
+--  },
+--
+--  root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}),
+--  settings = {
+--    java = {}
+--  },
+--  init_options = {
+--    bundles = {}
+--  },
+--}
+--
+--config['init_options'] = {
+--  bundles = {
+--    vim.fn.glob("/home/muce/libary/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-0.40.0.jar")
+--  };
+--}
+--
+--config['on_attach'] = function(client, bufnr)
+--  require('jdtls').setup_dap({ hotcodereplace = 'auto' })
+--end
+---- This starts a new client & server,
+---- or attaches to an existing client & server depending on the `root_dir`.
+--require('jdtls').start_or_attach(config)
+

@@ -1,0 +1,59 @@
+--local opts = { noremap=true, silent=true }
+--
+--local on_attach = function(client, bufnr)
+--  -- Enable completion triggered by <c-x><c-o>
+--  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+--
+--  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+--  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+--  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+--  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+--  vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+--end
+--
+--local flags = {
+--    allow_incremental_sync = true,
+--    debounce_text_changes = 200,
+--}
+--
+--
+--local lsp_flags = {
+--  -- This is the default in Nvim 0.7+
+--  debounce_text_changes = 150,
+--}
+--
+--local on_attach = function(client)
+--    require'completion'.on_attach(client)
+--end
+--
+--require('lspconfig')['eslint'].setup{
+--    on_attach = on_attach,
+--}
+--
+--require('lspconfig')['rust_analyzer'].setup{
+--    flags = flags,
+--    on_attach = on_attach,
+--    settings = {
+--        ['rust-analyzer'] = {
+--            cargo = {
+--                allFeatures = true,
+--            },
+--            checkOnSave = {
+--                allFeatures = true,
+--                overrideCommand = {
+--                    'cargo', 'clippy', '--workspace', '--message-format=json',
+--                    '--all-targets', '--all-features'
+--                }
+--            },
+--            proMacro = {
+--                ignored = {
+--                    ['async-trait'] = { 'async_trait' },
+--                    ['napi-derive'] = { 'napi' },
+--                    ['async-recursion'] = { 'async_recursion' },
+--                },
+--            },
+--        }
+--    }
+--}
+--
+
