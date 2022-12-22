@@ -13,7 +13,7 @@ local mappings = {
     ["<leader>w"] = {"<cmd>w<cr>", "save"},
     ["<leader>r"] = {"<cmd>lua vim.lsp.buf.rename()<cr>", "rename"},
     ["<leader>D"] = {"<cmd>lua vim.lsp.buf.signature_help()<cr>", "signature_help"},
-    ["<leader>l"] = {"<cmd>lua vim.lsp.buf.formatting()<cr>", "formatting"},
+    ["<leader>l"] = {"<cmd>lua vim.lsp.buf.format{async = true}<cr>", "formatting"},
     ["<leader>a"] = {"<cmd>RustCodeAction<cr>", "RustCodeAction"},
     ["<leader>A"] = {"<cmd>RustHoverActions<cr>", "RustHoverActions"},
     ["<leader>v"] = {"<cmd>vsplit<cr>", "vsplit"},

@@ -35,9 +35,6 @@ return require('packer').startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use {'neovim/nvim-lspconfig', config = "require('config.lsp.language-servers')"}
   use {'simrat39/rust-tools.nvim', config="require('config.lsp.rust-tools')" }
-  use 'mfussenegger/nvim-jdtls'
-
-  ------ Rust 
 
   -------- cmp
   use {'hrsh7th/nvim-cmp', config="require('config.cmp')" }

@@ -57,7 +57,7 @@
 --    }
 --  end
 --})
-
+--
 --vim.cmd[[colorscheme tokyonight]]
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -88,7 +88,6 @@ require("catppuccin").setup({
         types = {},
         operators = {},
     },
-    color_overrides = {},
     custom_highlights = {},
     integrations = {
         cmp = true,
